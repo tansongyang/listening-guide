@@ -10,183 +10,193 @@
       "type": "movement",
       "title": "Allegro moderato",
       "start": 30,
-      "accent": "",
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Introduction",
+      "title": "🎼1",
       "start": 30,
-      "accent": "",
-      "notes": "A quiet and mysterious introduction in the strings. Sounds like winter, doesn't it?"
+      "notes": ""
     },
     {
       "type": "poi",
-      "title": "Start of first section and Theme 1",
+      "title": "🎵T1",
       "start": 41,
-      "accent": "#dc322f",
-      "notes": "Note the shape of the phrases: long-short-long."
+      "notes": "You'll hear a lot of the first three notes."
     },
     {
       "type": "poi",
-      "title": "Clarinets: Theme 1 fragment A",
-      "start": 59,
-      "accent": "#dc322f",
-      "notes": "The clarinets restate the first three notes of Theme 1."
-    },
-    {
-      "type": "poi",
-      "title": "Still mysterious",
-      "start": 64,
-      "accent": "",
-      "notes": "The next minutes feature the violin transforming Theme 1."
-    },
-    {
-      "type": "poi",
-      "title": "Now heroic",
-      "start": 79,
-      "accent": "",
-      "notes": "I love this part."
-    },
-    {
-      "type": "poi",
-      "title": "Now more intense",
-      "start": 93,
-      "accent": "",
+      "title": "🎵T1B",
+      "start": 52,
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Building...",
-      "start": 110,
-      "accent": "",
-      "notes": "In each phrase, you can just barely hear the violin get through the first three notes of Theme 1 before going into runs."
-    },
-    {
-      "type": "poi",
-      "title": "And building...",
-      "start": 133,
-      "accent": "",
-      "notes": "Runs lead up to fragments of Theme 1."
-    },
-    {
-      "type": "poi",
-      "title": "Coming down, then building...",
-      "start": 158,
-      "accent": "",
-      "notes": "I'm not entirely sure how this music relates to the previous material, but it sure sounds cool."
-    },
-    {
-      "type": "poi",
-      "title": "...(Clarinets: Theme 1 fragment A)...",
-      "start": 189,
-      "accent": "#dc322f",
-      "notes": "And we're still building..."
-    },
-    {
-      "type": "poi",
-      "title": "End of first section",
-      "start": 193,
-      "accent": "",
-      "notes": "What a finish!"
-    },
-    {
-      "type": "poi",
-      "title": "Start of second section and Theme 2 fragments",
-      "start": 199,
-      "accent": "",
-      "notes": "Note the shape of the phrases: climbing down and climbing up."
-    },
-    {
-      "type": "poi",
-      "title": "Clarinets: Theme 2 fragment B",
-      "start": 233,
-      "accent": "#6c71c4",
+      "title": "🎶T1A",
+      "start": "1:04",
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Bassoons: Theme 2 fragment A",
-      "start": 242,
-      "accent": "#6c71c4",
+      "title": "🎶T1B 👍",
+      "start": "1:10",
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Bassoons: Theme 2 fragment B",
-      "start": 248,
-      "accent": "#6c71c4",
+      "title": "🎶T1A",
+      "start": "1:33",
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Clarinets: Theme 2 fragment A",
-      "start": 253,
-      "accent": "#6c71c4",
-      "notes": "Leading up to..."
-    },
-    {
-      "type": "poi",
-      "title": "Theme 3 fragment (!) leading to ...",
-      "start": 259,
-      "accent": "#268bd2",
-      "notes": "This may just sound like pretty rising notes, but just wait."
-    },
-    {
-      "type": "poi",
-      "title": "Theme 2 in full glory",
-      "start": 270,
-      "accent": "#6c71c4",
-      "notes": "But also listen to the accompaniment."
-    },
-    {
-      "type": "poi",
-      "title": "Solo Viola: Theme 3",
-      "start": 289,
-      "accent": "#268bd2",
-      "notes": "It's so cool how these themes are interweaving."
-    },
-    {
-      "type": "poi",
-      "title": "Beautiful rising to...",
-      "start": 315,
-      "accent": "",
-      "notes": "One of my favorite parts is coming up."
-    },
-    {
-      "type": "poi",
-      "title": "Theme 2 fragment B, serene at first...",
-      "start": 324,
-      "accent": "#6c71c4",
-      "notes": "I love this part."
-    },
-    {
-      "type": "poi",
-      "title": "...descending and getting darker...",
-      "start": 329,
-      "accent": "",
+      "title": "Solo 😎",
+      "start": "2:38",
       "notes": ""
     },
     {
       "type": "poi",
-      "title": "Dark",
-      "start": 337,
-      "accent": "",
-      "notes": "Listen to what the strings are plucking."
+      "title": "🎼2A 👍",
+      "start": "3:19",
+      "notes": "Listen to the falling and rising. These will eventually grow into T2."
     },
     {
       "type": "poi",
-      "title": "Theme 3: end of second section, beginning of third",
-      "start": 353,
-      "accent": "#268bd2",
+      "title": "T2A",
+      "start": "4:02",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "T2B",
+      "start": "4:08",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼2B",
+      "start": "4:13",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "😊",
+      "start": "4:19",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎵T2 😍",
+      "start": "4:30",
+      "notes": "Listen to the accompaniment too."
+    },
+    {
+      "type": "poi",
+      "title": "😊",
+      "start": "5:15",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎶T2B 😊➡😮",
+      "start": "5:24",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼3A 🎵T3 😎",
+      "start": "5:53",
       "notes": "This part is really fun to play."
     },
     {
       "type": "poi",
-      "title": "That's all, folks!",
-      "start": 374,
-      "accent": "#268bd2",
-      "notes": "This is all I've got for now. Will update soon. In the meantime, you know enough about the music to understand the rest of the first movement."
+      "title": "🎼3B",
+      "start": "6:14",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼3C",
+      "start": "6:42",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼3D",
+      "start": "6:54",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼4 🎶T1",
+      "start": "7:35",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "Double stops 😎",
+      "start": "9:07",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "😮",
+      "start": "9:37",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼5",
+      "start": "10:19",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🔄🎼1",
+      "start": "10:33",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼6",
+      "start": "12:10",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎶T1A",
+      "start": "12:16",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎵M1 😍",
+      "start": "12:30",
+      "notes": "Five descending notes."
+    },
+    {
+      "type": "poi",
+      "title": "🎼7 😊",
+      "start": "13:06",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🔄🎼2B",
+      "start": "13:19",
+      "notes": ""
+    },
+    {
+      "type": "poi",
+      "title": "🎼8 (🔄🎼3)",
+      "start": "15:04",
+      "notes": "Listen to how the orchestra plays almost exactly the same music as in 🎼3ABC."
+    },
+    {
+      "type": "poi",
+      "title": "👏",
+      "start": "16:18",
+      "notes": "Thank you! That's all I've got for now."
     }
   ]
 }

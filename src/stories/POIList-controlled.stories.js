@@ -7,28 +7,43 @@ import p from './data/sibelius.json';
 const sibelius = normalizePiece(p);
 
 class POIListStory extends Component {
-  secondRef = second => {
-    this.second = second;
+  state = {
+    index: 0,
+  };
+
+  indexRef = index => {
+    this.index = index;
   };
 
   controllerRef = controller => {
     this.controller = controller;
   };
 
+  handleIndexChange = index => {
+    this.setState({ index });
+  };
+
   handleScrollClick = () => {
-    this.controller.scrollToSecond(this.second.value);
+    const index = +this.index.value;
+    this.controller.scrollToIndex(index);
+    this.handleIndexChange(index);
   };
 
   render() {
     return (
       <Container>
         <POIListContainer>
-          <POIList controllerRef={this.controllerRef} pois={pois} />
+          <POIList
+            controllerRef={this.controllerRef}
+            index={this.state.index}
+            onIndexChange={this.handleIndexChange}
+            pois={pois}
+          />
         </POIListContainer>
         <div>
-          <input ref={this.secondRef} type="number" defaultValue={0} />
+          <input ref={this.indexRef} type="number" defaultValue={0} />
           <button onClick={this.handleScrollClick}>
-            Scroll to second, no select
+            Scroll to and select index
           </button>
         </div>
       </Container>

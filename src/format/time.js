@@ -16,6 +16,21 @@ export function secondsToString(seconds) {
   return value + padTime(seconds % 60);
 }
 
+export function stringToSeconds(str) {
+  const parts = str.split(':');
+  const seconds = +parts[parts.length - 1];
+  let total = seconds;
+  if (parts.length > 1) {
+    const minutes = +parts[parts.length - 2];
+    total += minutes * 60;
+  }
+  if (parts.length === 3) {
+    const hours = +parts[0];
+    total += hours * 60 * 60;
+  }
+  return total;
+}
+
 function padTime(value) {
   return padStart(value, 2, '0');
 }

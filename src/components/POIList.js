@@ -4,6 +4,7 @@ import glamorous from 'glamorous';
 import { findIndexByStart } from '../data/poi';
 import List from './List';
 import POI from './POI';
+import theme from './theme';
 
 class POIList extends Component {
   static propTypes = {
@@ -14,19 +15,20 @@ class POIList extends Component {
      */
     controllerRef: PropTypes.func,
     /**
+     * The index to highlight.
      * If specified, this becomes a controlled component.
      */
     index: PropTypes.number,
     /**
      * (index: number) => void
      */
-    onChange: PropTypes.func,
+    onIndexChange: PropTypes.func,
     /**
-     * Difference with onChange is that this is only called
-     * when a user takes direct action on a POI.
-     * (index: number) => void
+     * ({
+     *   byUser: boolean,
+     * }) => void
      */
-    onSelect: PropTypes.func,
+    onScroll: PropTypes.func,
     pois: PropTypes.array.isRequired,
   };
 
@@ -42,38 +44,40 @@ class POIList extends Component {
 
   handlePOIClick = e => {
     const activeIndex = +e.currentTarget.dataset.index;
-    if (!isControlled(this)) {
-      this.setState({ activeIndex });
-    }
-
     const { props } = this;
-    props.onSelect && props.onSelect(activeIndex);
-    props.onChange && props.onChange(activeIndex);
+    if (activeIndex !== getActiveIndex(this)) {
+      props.onIndexChange && props.onIndexChange(activeIndex);
+      if (!isControlled(this)) {
+        this.setState({ activeIndex });
+      }
+    }
   };
 
   renderPOI = (poi, index) => {
     const active = getActiveIndex(this) === index;
-    const B = POIButton(active);
     return (
-      <B data-index={index} onClick={this.handlePOIClick}>
+      <POIContainer data-index={index} onClick={this.handlePOIClick}>
         <POI
           accent={poi.accent}
           active={active}
           title={poi.title}
           start={poi.start}
         />
-      </B>
+      </POIContainer>
     );
   };
 
   render() {
     const { props } = this;
     return (
-      <List
-        controllerRef={this.ref}
-        items={props.pois}
-        renderItem={this.renderPOI}
-      />
+      <Container>
+        <List
+          controllerRef={this.ref}
+          items={props.pois}
+          onScroll={props.onScroll}
+          renderItem={this.renderPOI}
+        />
+      </Container>
     );
   }
 }
@@ -92,30 +96,27 @@ function isControlled(component) {
 
 function makeController(component) {
   return {
+    scrollToIndex(index) {
+      component.listController.scrollToIndex(index);
+    },
     scrollToSecond(second) {
-      const { props } = component;
-      const activeIndex = findIndexByStart(props.pois, second);
-      const activeIndexChanged = getActiveIndex(component) !== activeIndex;
-      if (isControlled(component) && activeIndexChanged) {
-        props.onChange(activeIndex);
-      } else {
-        component.setState({ activeIndex }, () => {
-          component.listController.scrollToIndex(activeIndex);
-          props.onChange && props.onChange(activeIndex);
-        });
-      }
+      const index = findIndexByStart(component.props.pois, second);
+      component.listController.scrollToIndex(index);
     },
   };
 }
 
-const POIButton = active =>
-  glamorous.button({
-    display: 'block',
-    width: '100%',
-    margin: 0,
-    padding: 0,
-    border: 0,
-    backgroundColor: 'transparent',
-    textAlign: 'start',
-    cursor: 'pointer',
-  });
+const Container = glamorous.div({
+  boxSizing: 'border-box',
+  height: '100%',
+  border: theme.main.border,
+});
+
+const POIContainer = glamorous.div({
+  width: 'calc(100% - 1rem)',
+  margin: '0.5rem',
+  display: 'flex',
+  '& > *': {
+    flex: 1,
+  },
+});

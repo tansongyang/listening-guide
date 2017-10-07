@@ -6,6 +6,7 @@ class Video extends Component {
   static propTypes = {
     /**
      * ({
+     *   getElapsed(): number | null, // Seconds
      *   seek(to: number): void, // Seconds
      * }) => void
      */
@@ -57,6 +58,9 @@ export default Video;
 
 function makeController(player) {
   return {
+    getElapsed() {
+      return player.getCurrentTime();
+    },
     seek(to) {
       player.seekTo(to);
     },

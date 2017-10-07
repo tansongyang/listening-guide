@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import glamorous from 'glamorous';
-import { themeText } from '../components/theme';
 import Viewer from '../components/Viewer';
-import piece from './data/sibelius.json';
+import { normalizePiece } from '../data/normalize';
+import p from './data/sibelius.json';
+
+const piece = normalizePiece(p);
+const pois = piece.analysis.filter(a => a.type === 'poi');
 
 class ViewerStory extends Component {
   render() {
@@ -17,17 +20,21 @@ class ViewerStory extends Component {
 
 export default ViewerStory;
 
-const pois = piece.analysis.filter(a => a.type === 'poi');
-
-const Title = glamorous.h1({
-  ...themeText,
+const Title = glamorous.h2({
   padding: '1.6rem',
   fontSize: '3.2rem',
-  fontStyle: 'italic',
   textAlign: 'center',
 });
 
 const Container = glamorous.div({
-  width: '100vw',
-  height: '100vh',
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  '& > *:last-child': {
+    flex: 1,
+  },
 });

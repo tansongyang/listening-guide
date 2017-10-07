@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import glamorous from 'glamorous';
+import Header from './components/Header';
+import theme, { themeText } from './components/theme';
+import Viewer from './stories/Viewer.stories';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Container>
+        <Header />
+        <Main>
+          <Viewer />
+        </Main>
+      </Container>
     );
   }
 }
 
 export default App;
+
+const Container = glamorous.div({
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  ...themeText(theme.main),
+});
+
+const Main = glamorous.main({
+  flex: 1,
+  position: 'relative',
+});
