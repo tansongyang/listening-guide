@@ -1,10 +1,12 @@
 {
   "name": "listening-guide",
   "version": "0.1.0",
+  "homepage": "https://tansongyang.github.io/listening-guide",
   "private": true,
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "bezier-easing": "^2.0.3",
+    "gh-pages": "0.11.0",
     "glamorous": "^4.9.5",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
@@ -16,6 +18,8 @@
   },
   "scripts": {
     "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
